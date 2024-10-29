@@ -6,7 +6,7 @@ This is the official code release for [LiFT: A Surprisingly Simple Lightweight F
 
 This repository includes code to use pretrained LiFT modules in combination with pretrained ViT backbones as dense feature extractors. In addition, it includes code to train new LiFT modules for your specific ViT backbone. Additional details are provided in the sections below.
 
-This repository included built in support for several DINO(v1) and fully supervised ViT backbones. Additional backbones and pretrained LiFT modules will be made available in future updates.
+This repository includes built in support for several DINO(v1) and fully supervised ViT backbones. Additional backbones and pretrained LiFT modules will be made available in future updates.
 
 Also please see our [Project Webpage](https://www.cs.umd.edu/~sakshams/LiFT/).
 
@@ -41,7 +41,7 @@ python lift_extractor.py --image_path assets/sample.jpg --output_path sample.pth
 python lift_extractor.py --image_path assets/sample.jpg --output_path sample.pth --model_type dino_vitb8 --lift_path pretrained/lift_dino_vitb8.pth
 ```
 
-lift_extractor.py also has built-in support to run LiFT iteratively boost feature density further. Please note that apply LiFT iterative increases both compute cost and memory requirements, and, depending on the task, may yeild diminishing returns in performance improvements. We recommend testing multiple iteration numbers to test what feature density is best for your task. Example usage:
+lift_extractor.py also has built-in support to run LiFT iteratively to boost feature density further. Please note that applying LiFT iterative increases both compute cost and memory requirements, and, depending on the task, may yeild diminishing returns in performance improvements. We recommend testing multiple iteration numbers to test what feature density is best for your task. Example usage:
 ```
 python lift_extractor.py --image_path assets/sample.jpg --output_path sample.pth --model_type dino_vits16 --lift_path pretrained/lift_dino_vits16.pth --lift_iter 4
 python lift_extractor.py --image_path assets/sample.jpg --output_path sample.pth --model_type dino_vits8 --lift_path pretrained/lift_dino_vits8.pth --lift_iter 3
