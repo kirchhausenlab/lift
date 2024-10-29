@@ -1,0 +1,9 @@
+torch
+torchvision
+timm
+scikit-image
+opencv-python
+pycocotools
+pandas
+tqdm
+natsort
